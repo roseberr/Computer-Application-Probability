@@ -18,10 +18,9 @@ overfitting될수 있지만 validation dataset과 test dataset의 결과가 비�
 
 ## data graph
 
-![1](https://user-images.githubusercontent.com/26202424/177026961-ea69e116-99bd-4493-a432-74e791d05c1a.png)
-![2](https://user-images.githubusercontent.com/26202424/177026963-4290669d-c3fc-4275-b3cf-9582605d00c4.png)
-![3](https://user-images.githubusercontent.com/26202424/177026964-71f807ce-cfd1-4da4-b554-07f2c7fdb41e.png)
-![4](https://user-images.githubusercontent.com/26202424/177026965-0d44a573-6986-4411-baa5-260f874ebaea.png)
+
+![image](https://user-images.githubusercontent.com/26202424/177029047-65dc212e-3cda-4988-87a8-bf1e566525cc.png)
+
 
 - 일차원 데이터 그래프를 보면 setosa 꽃이 다른 두종류의 꽃보다 p_length,p_width에서 확연히 다른 길이를 보여준다
 - verginica와 versicolor 꽃들도 p_length,p_width에서 비교적 잘 분류할수있다.
