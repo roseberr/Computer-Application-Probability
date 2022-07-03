@@ -67,8 +67,15 @@ decision boundary에서 if h(x)<=0일떄 y=0로 예측합니다.
 - 이것을 10000번 돌려서 W를 정의 후 h(x)를 구한다.
 - multi class선에서 setosa와 다른 2종류, virginica와 다른 2종류, versicolor와 다른 2종류 이렇게 3번 logistic regression을 한다.
 
+![image](https://user-images.githubusercontent.com/26202424/177029115-9ff54af5-c354-43a6-9266-95ec3fa5d240.png)
+
+출처 : https://github.com/miku/nntour/blob/master/README.md
+
+## decision boundary 구한후 그래프
 
 ![88](https://user-images.githubusercontent.com/26202424/177028454-2588a499-5e41-4530-af22-d29732e15b3d.png)
+
+
 
 ## 결론
 - versicolor와 다른 2종류를 할떄 거의 모든 feature가 setosa , versicolor, virginica 순서대로 있어서 versicolor는 신뢰도가 높지 않다. 
