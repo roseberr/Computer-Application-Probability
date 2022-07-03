@@ -43,10 +43,34 @@ overfitting될수 있지만 validation dataset과 test dataset의 결과가 비�
 
 
 ## 2차원 data graph
-![1](https://user-images.githubusercontent.com/26202424/177027637-ddde0085-c126-4f82-9859-53a7c22ca20c.png)
-![2](https://user-images.githubusercontent.com/26202424/177027639-169934e4-726d-40ca-a3cb-b8280a3b3d54.png)
-![3](https://user-images.githubusercontent.com/26202424/177027641-f6d554fd-d1b1-4f9c-b778-119becbc03f6.png)
-![4](https://user-images.githubusercontent.com/26202424/177027642-935c4e75-2a26-46c4-89f1-dd5b4456d3b1.png)
-![5](https://user-images.githubusercontent.com/26202424/177027643-768db22d-18ea-4425-9309-d31514c58cd3.png)
-![6](https://user-images.githubusercontent.com/26202424/177027644-f438086c-fb6a-4cf5-949c-974e1f758b9b.png)
+![55](https://user-images.githubusercontent.com/26202424/177028422-e361fc05-ad6a-4d86-8d30-d45c8e2d1323.png)
 
+## 2차원 그래프에서 optimal decision boundary 찾기
+- logisic regression 사용 분류 
+- If h(x)>=0, predict “y=1”
+  If h(x)<0.5, predict “y=0”으로 classification한다고 할 때 0<=h(x)<=1을 원합니다. 그래서 우리는 h(x)에 sigmoid 함수를 취해줍니다.
+- sigmoid 함수 특성은 아무리 작아도 0이상이고 아무리 커도 1이하이기 떄문입니다. 이 함수의 특성을 활용해서 로지스틱 분류를 한다.
+  
+![image](https://user-images.githubusercontent.com/26202424/177028775-12c227a9-fe65-4625-9520-194e20d61391.png)
+![image](https://user-images.githubusercontent.com/26202424/177028777-97676358-6970-4611-89ec-c8bca04f80f0.png)
+
+- 가설함수를 다음과 같이 설정했습니다.
+H(x,y)=Sigmoid(1+w0*x+W1*y)  상수를 1로 설정하는 이유는 w0와 w1에 의해서 실질적으로 y=ax+b라 할떄 a와 b가 정해지기 떄문 입니다.
+decision boundary에서 if h(x)>=0일떄 y=1로 예측하고
+decision boundary에서 if h(x)<=0일떄 y=0로 예측합니다.
+
+여기서 비용함수는 
+
+
+![image](https://user-images.githubusercontent.com/26202424/177028798-86d68f62-3829-4e10-b19b-b0a56b1de69b.png)
+
+- cost최소화하는 x,y를 위해서 경사하강법을 사용합니다. log가 없는 cost함수는 h의 도함수가 0인 부분이 많아서 실제로 h(x)가 최소화되는 값이 구해지지 않기떄문이다.
+- 이것을 10000번 돌려서 W를 정의 후 h(x)를 구한다.
+- multi class선에서 setosa와 다른 2종류, virginica와 다른 2종류, versicolor와 다른 2종류 이렇게 3번 logistic regression을 한다.
+
+
+![88](https://user-images.githubusercontent.com/26202424/177028454-2588a499-5e41-4530-af22-d29732e15b3d.png)
+
+## 결론
+- versicolor와 다른 2종류를 할떄 거의 모든 feature가 setosa , versicolor, virginica 순서대로 있어서 versicolor는 신뢰도가 높지 않다. 
+- 그래서 setosa virginica를 분류하는선이 decision boundary이다.
