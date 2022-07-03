@@ -67,7 +67,7 @@ decision boundary에서 if h(x)<=0일떄 y=0로 예측합니다.
 - 이것을 10000번 돌려서 W를 정의 후 h(x)를 구한다.
 - multi class선에서 setosa와 다른 2종류, virginica와 다른 2종류, versicolor와 다른 2종류 이렇게 3번 logistic regression을 한다.
 
-![image](https://user-images.githubusercontent.com/26202424/177029115-9ff54af5-c354-43a6-9266-95ec3fa5d240.png)
+![](https://raw.githubusercontent.com/miku/nntour/master/gifs/perceptron-pla-14-steps.gif?token=AADRybgfQ0WmVaU-NZbgwHdoFhCN-XdVks5YMzirwA%3D%3D)
 
 출처 : https://github.com/miku/nntour/blob/master/README.md
 
