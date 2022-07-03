@@ -82,4 +82,43 @@ decision boundary에서 if h(x)<=0일떄 y=0로 예측합니다.
 - 그래서 setosa virginica를 분류하는선이 decision boundary이다.
 
 
-# 3번 부턴 다음에 시간날떄..
+## Bayesian Rule을 활용한 분류
+
+![image](https://user-images.githubusercontent.com/26202424/177040023-d012413d-05e3-4ee4-bef8-2f6463abb759.png)
+
+- prior는 클래스의 개수를 전체 데이터 개수로 나눈것이여서 쉽게 구할수 있다.
+- 주의) 만약 여기서 setosa인 데이터가 총 6개, sepal length가 2.8이 2개 2.9가 4개 있을경우 
+setosa일떄 sepal length=2.7일 확률은 1/3이다. 만약 3.0 같이 없는데이터가 들어오면 확룰이 0이된다.
+- 이럴경우 우리는 laplace smoothing: 모든 데이터가 하나씩 있다고 가정하여 확률이 0이되는것을 방지한다)을 사용할 수있으나 저는 위에서 1차원 decision boundary와 비교하여 범위 안에 있을시 확률을 1 , 없을경우 0.01로 가정하여 각각 class 별로의 posterior를 비교하여 classification 하였다.
+
+## 결론 
+- 이 방법으로 분류시 정확도는  0.8이 나왔다.
+
+![image](https://user-images.githubusercontent.com/26202424/177040275-de70c34d-4171-4542-bc39-013de92e0189.png)
+
+## Gaussian Classifier를 이용한 분류 
+
+
+![image](https://user-images.githubusercontent.com/26202424/177040396-9c0f8d74-9140-4acb-bc6e-6e37d1310838.png)
+
+- likelihood가 gaussian distribution을 따른다고 가정할 떄 위의 공식을 따른다.
+- data 값을 0.1단위로 나누고 해당 클래스 범위에서 Gaussian distribution으로 근사해서 해당범위의 pmf를 구할수 있다.
+- 이때 naive gaussian에서 likelihood값은 해당 클래스의 pmf/3 class의 pmf의 합이 된다.
+
+## 결론 
+- 이 방법으로 분류시 정확도는 0.9가 나왔다.
+
+![image](https://user-images.githubusercontent.com/26202424/177040501-bc4866d3-45b7-4145-8beb-43dbb1fec967.png)
+
+## Multivariate Gaussian Distribution을 이용한 분류
+- 위의 Gaussian Distribytion과 다른점은 single variable 에서 multi variable로 바뀐 것이다. 
+- 즉 다른 특성들 끼리의 연관성을 구해서 posterior을 구하는 것 인데 그역할을 공분산이 한다.
+- 공분산을 통해서 연관성을 파악하고 likelihood를 구해서 posterior을 구한다.
+
+![image](https://user-images.githubusercontent.com/26202424/177040628-d501c697-8818-4c72-8387-aad0f0613304.png)
+
+# 결론
+- 지금까지 5개의 classification중 제일 복잡한 만큼 정확도가 0.96666으로 가장 높았다.
+
+![image](https://user-images.githubusercontent.com/26202424/177040687-bde1a67a-91ff-4c37-9dc4-45af1a325228.png)
+
