@@ -74,3 +74,6 @@ decision boundary에서 if h(x)<=0일떄 y=0로 예측합니다.
 ## 결론
 - versicolor와 다른 2종류를 할떄 거의 모든 feature가 setosa , versicolor, virginica 순서대로 있어서 versicolor는 신뢰도가 높지 않다. 
 - 그래서 setosa virginica를 분류하는선이 decision boundary이다.
+
+
+# 3번 부턴 다음에 시간날떄..
