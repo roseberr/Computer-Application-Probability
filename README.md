@@ -117,7 +117,7 @@ setosa일떄 sepal length=2.7일 확률은 1/3이다. 만약 3.0 같이 없는�
 
 ![image](https://user-images.githubusercontent.com/26202424/177040628-d501c697-8818-4c72-8387-aad0f0613304.png)
 
-# 결론
+## 결론
 - 지금까지 5개의 classification중 제일 복잡한 만큼 정확도가 0.96666으로 가장 높았다.
 
 ![image](https://user-images.githubusercontent.com/26202424/177040687-bde1a67a-91ff-4c37-9dc4-45af1a325228.png)
