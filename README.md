@@ -26,11 +26,21 @@ overfitting될수 있지만 validation dataset과 test dataset의 결과가 비�
 - 일차원 데이터 그래프를 보면 setosa 꽃이 다른 두종류의 꽃보다 p_length,p_width에서 확연히 다른 길이를 보여준다
 - verginica와 versicolor 꽃들도 p_length,p_width에서 비교적 잘 분류할수있다.
 
-## 일차원 그래프에서 오차합을 통한 boundary 찾기
+## 1차원 그래프에서 오차합을 통한 boundary 찾기
 
-- 각 꽃 평균값에서 떨어진 값들의 합을 통해서 minimum boundary를 찾는다.
+- 각 그래프에서 선 2개를 그어 3종류의 꽃의 종류를 맞춘다고 할때 선 2개의 위치를 계속 움직이면서 error의 총합이 가장 적은선을 구한다.
 
-![7](https://user-images.githubusercontent.com/26202424/177027537-f0173177-9efa-4990-8035-df16f4c05583.png)
+
+-  두 선으로 맨왼쪽이 setosa 중간이 versicolor 맨오른쪽에 virginica라고 할떄 
+- Error = Count ( class ≠ setosa | predict = setosa ) + 
+             Count ( class ≠ Versiclolor | predict = Versicolor) + 
+             Count ( class ≠ Virginica | predict = Virginica) 이다. 
+             
+             
+![8](https://user-images.githubusercontent.com/26202424/177028069-0029d388-2c36-431c-b13c-929d103f7a66.png)
+            
+
+
 
 ## 2차원 data graph
 ![1](https://user-images.githubusercontent.com/26202424/177027637-ddde0085-c126-4f82-9859-53a7c22ca20c.png)
